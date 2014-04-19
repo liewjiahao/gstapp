@@ -53,6 +53,11 @@ app.get('/login', function(req, res){
 	res.render('login', {user: req.user});
 });
 
+app.get('/logout', function(req, res){
+	req.logOut();
+	res.redirect('/login');
+});
+
 app.get('/auth/google', 
 	passport.authenticate('google', 
 		{scope: ['https://www.googleapis.com/auth/userinfo.profile',

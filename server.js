@@ -41,7 +41,7 @@ passport.use(new GoogleStrategy({
 
 app.use(express.static(__dirname + '/public'));
 
-app.get('/', function(req, res){
+app.get('/', ensureAuthenticated, function(req, res){
 	res.render('index', {user: req.user});
 });
 

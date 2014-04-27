@@ -1,0 +1,48 @@
+
+<form name="noc_form" ng-submit="submit()">
+	<div>Client
+		<select ng-model="noc.client_name" ng-change="change()" required ngTrim="true">
+				<option ng-repeat="client in clients">{{client.client_name}}</option>
+		</select>
+	</div>
+
+	<div>
+		Address <input type="text" ng-model="noc.address_line_1" required ngTrim="true">
+	</div>
+	<div>
+		<input type="text" ng-model="noc.address_line_2" required ngTrim="true">
+	</div>
+	<div>
+		<input type="text" ng-model="noc.address_line_3" required ngTrim="true">
+	</div>
+
+	<div>
+		NO <input type="text" ng-model="noc.noc_no" required ngTrim="true">
+	</div>
+	<div>
+		DATE <input type="text" ng-model="noc.noc_date" placeholder="DD/MM/YYYY" required ngTrim="true">
+	</div>
+	<div>
+		AGENT <input type="text" ng-model="noc.noc_agent" required ngTrim="true">
+	</div>
+	<div>
+		<input type="text" ng-model="noc.noc_desc_1" required ngTrim="true"> RM <input type="number" ng-model="noc.noc_amount_1" required ngTrim="true"> 
+	</div>
+	<div>
+		<input type="text" ng-model="noc.noc_desc_2"> RM <input type="number" ng-model="noc.noc_amount_2"> 
+	</div>
+	<div>
+		<input type="text" ng-model="noc.noc_desc_3"> RM <input type="number" ng-model="noc.noc_amount_3"> 
+	</div>
+	<div>
+		<input type="text" ng-model="noc.noc_desc_4"> RM <input type="number" ng-model="noc.noc_amount_4"> 
+	</div>
+	<div>
+		<input type="text" ng-model="noc.noc_desc_5"> RM <input type="number" ng-model="noc.noc_amount_5"> 
+	</div>
+	<div>
+		<input type="text" ng-model="noc.noc_desc_6"> RM <input type="number" ng-model="noc.noc_amount_6"> 
+	</div>
+
+	<button type="submit" ng-disabled="noc_form.$invalid">Generate NOC!</button>
+</form>

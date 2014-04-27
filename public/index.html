@@ -1,0 +1,20 @@
+<!doctype html>
+<html ng-app="gstapp">
+<head>
+    <meta charset="utf-8" />
+    <title>GST APP</title>
+    <script src="../js/angular.min.js"></script>
+    <script src="../js/angular-route.min.js"></script>
+    <script src="../js/index.js"></script>
+
+</head>
+<body>
+	<h2 ng-controller="welcome_control">
+		Helloooooo, {{user.username}}.	<a href="/logout">Logout</a>
+	</h2>
+	
+
+	<div ng-view>
+	</div>
+</body>
+</html>
